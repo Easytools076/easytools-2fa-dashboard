@@ -2,40 +2,43 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <title>EasyTools 2FA Dashboard</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <div class="logo">
-    <img src="logo.png" alt="EasyTools Logo">
+  <div class="container">
+    <header>
+      <img src="logo.png" alt="EasyTools Logo" class="logo">
+      <h1>EasyTools</h1>
+    </header>
+    <section class="step">
+      <h2>Step 1:</h2>
+      <p>Download AdsPower Browser from: <a href="https://adspower.com/download" target="_blank">adspower.com/download</a></p>
+    </section>
+    <section class="step">
+      <h2>Step 2:</h2>
+      <p>Login with:</p>
+      <div class="credentials">
+        <input type="text" id="email" readonly value="easytools22@outlook.com">
+        <button class="copy-btn" data-target="email">Copy</button>
+      </div>
+      <div class="credentials">
+        <input type="text" id="password" readonly value="%1?QbzS1">
+        <button class="copy-btn" data-target="password">Copy</button>
+      </div>
+    </section>
+    <section class="step">
+      <h2>Step 3:</h2>
+      <p>Click below to view your live 2FA code:</p>
+      <div id="code" class="code-display">••••••</div>
+      <button id="reveal-btn" class="action-btn">Reveal Code</button>
+    </section>
+    <section class="step">
+      <h2>Step 4:</h2>
+      <p>Click “Open” on the profile named Easy Tools.</p>
+    </section>
   </div>
-
-  <div class="section">
-    <h3>Step 1:</h3>
-    <p>Download AdsPower Browser: <a href="https://adspower.com/download" target="_blank">adspower.com/download</a></p>
-  </div>
-
-  <div class="section">
-    <h3>Step 2:</h3>
-    <p>Login with:</p>
-    <div class="input-box"><input id="email" value="easytools22@outlook.com" readonly><button class="copy-btn" onclick="copy('email', this)">Copy</button></div>
-    <div class="input-box"><input id="pw" value="%1?QbzS1" readonly><button class="copy-btn" onclick="copy('pw', this)">Copy</button></div>
-  </div>
-
-  <div class="section">
-    <h3>Step 3:</h3>
-    <p>Click below to view your live 2FA code:</p>
-    <div id="code" class="code">••••••</div>
-    <button id="reveal-btn" class="btn">Reveal Code</button>
-  </div>
-
-  <div class="section">
-    <h3>Step 4:</h3>
-    <p>Click “Open” on the profile named <code>Easy Tools</code>.</p>
-  </div>
-
-  <script type="module" src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

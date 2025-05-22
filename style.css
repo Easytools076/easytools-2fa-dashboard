@@ -1,13 +1,17 @@
-*{box-sizing:border-box;margin:0;padding:0}
-body{background:#111;color:#eee;font-family:sans-serif;display:flex;flex-direction:column;align-items:center;padding:20px}
-.logo img{width:220px;margin-bottom:20px;animation:fadeIn 1s}
-.section{background:#1e1e1e;padding:20px;margin:10px 0;border-radius:8px;box-shadow:0 0 15px rgba(0,200,255,0.2);width:90%;max-width:500px;animation:fadeInUp 0.8s}
-.section h3{color:#00eaff;margin-bottom:10px}
-.input-box{display:flex;margin:5px 0}
-.input-box input{flex:1;padding:10px;border:none;border-radius:4px;background:#222;color:#fff}
-.copy-btn{margin-left:10px;padding:10px;background:#0cc;border:none;border-radius:4px;cursor:pointer;transition:background .3s}
-.copy-btn.copied{background:#2ecc71}
-.btn{margin-top:10px;padding:10px 20px;background:#0cc;border:none;border-radius:4px;cursor:pointer;transition:background .3s}
-.btn:active{background:#09a}
-.code{font-size:2rem;color:#0f0;text-align:center;margin:10px 0;letter-spacing:0.2rem}
-@keyframes fadeIn{from{opacity:0}to{opacity:1}}@keyframes fadeInUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+body {
+  margin:0; padding:0;
+  font-family:sans-serif;
+  background: #111; color:#eee;
+}
+.container { max-width:600px; margin:2rem auto; }
+header { text-align:center; margin-bottom:2rem; }
+.logo { height:50px; vertical-align:middle; }
+h1 { display:inline-block; margin-left:0.5rem; font-size:1.5rem; }
+.step { background:#222; padding:1rem; margin-bottom:1rem; border-radius:8px; }
+.step h2 { margin-top:0; color:#6cf; }
+.credentials { display:flex; margin:0.5rem 0; }
+.credentials input { flex:1; padding:0.5rem; background:#333; border:none; color:#eee; }
+.copy-btn { padding:0 1rem; margin-left:0.5rem; background:#3cb; border:none; color:#fff; cursor:pointer; border-radius:4px; }
+.copy-btn.copied { background:#2a2; }
+.action-btn { padding:0.75rem 1.5rem; background:#3cb; border:none; color:#fff; border-radius:4px; cursor:pointer; }
+.code-display { font-size:2rem; letter-spacing:0.5rem; color:#6f6; text-align:center; margin:1rem 0; }

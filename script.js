@@ -1,28 +1,35 @@
-import { authenticator } from 'https://esm.sh/otplib';
-
-const SECRET = 'WBIPYXCCCYYNBQS5TJII3HXISMZLJ3ZL';
-
-document.getElementById('reveal-btn').onclick = () => {
-  const code = authenticator.generate(SECRET.trim());
-  document.getElementById('code').textContent = code;
-  const btn = document.getElementById('reveal-btn');
-  btn.textContent = 'Copied';
-  btn.classList.add('copied');
-  navigator.clipboard.writeText(code);
-  setTimeout(() => {
-    btn.textContent = 'Reveal Code';
-    btn.classList.remove('copied');
-  }, 1500);
-};
-
-window.copy = (id, btn) => {
-  const val = document.getElementById(id).value;
-  navigator.clipboard.writeText(val).then(() => {
-    btn.textContent = 'Copied';
-    btn.classList.add('copied');
-    setTimeout(() => {
-      btn.textContent = 'Copy';
-      btn.classList.remove('copied');
-    }, 1500);
+document.addEventListener('DOMContentLoaded', () => {
+  // Copy buttons
+  document.querySelectorAll('.copy-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const id = btn.getAttribute('data-target');
+      const input = document.getElementById(id);
+      input.select();
+      navigator.clipboard.writeText(input.value);
+      btn.classList.add('copied');
+      btn.textContent = 'Copied';
+      setTimeout(() => {
+        btn.classList.remove('copied');
+        btn.textContent = 'Copy';
+      }, 1500);
+    });
   });
-};
+
+  // Reveal 2FA code
+  const reveal = document.getElementById('reveal-btn');
+  const codeEl = document.getElementById('code');
+  reveal.addEventListener('click', async () => {
+    reveal.disabled = true;
+    reveal.textContent = 'Loading…';
+    try {
+      const res = await fetch('/api/get-2fa');
+      const { code } = await res.json();
+      codeEl.textContent = code;
+    } catch {
+      codeEl.textContent = 'Error';
+    } finally {
+      reveal.disabled = false;
+      reveal.textContent = 'Reveal Code';
+    }
+  });
+});
