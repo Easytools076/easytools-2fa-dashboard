@@ -7,30 +7,39 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
+  <header>
     <img src="logo.png" alt="EasyTools Logo" class="logo">
     <h1>EasyTools 2FA Dashboard</h1>
-    <div class="step">
+  </header>
+  <main>
+    <section>
       <h2>Step 1:</h2>
-      <p>Download AdsPower Browser from:</p>
-      <a href="https://adspower.com/download" target="_blank">adspower.com/download</a>
-    </div>
-    <div class="step">
+      <p>Download AdsPower Browser from: <a href="https://adspower.com/download" target="_blank">adspower.com/download</a></p>
+    </section>
+    <section>
       <h2>Step 2:</h2>
-      <p>Use these credentials to log in to AdsPower and then use the QR for your 2FA:</p>
-      <div class="field"><input type="text" id="email" readonly value="easytools22@outlook.com"><button data-target="email" class="copy-btn">Copy</button></div>
-      <div class="field"><input type="text" id="password" readonly value="%1?QbzS1"><button data-target="password" class="copy-btn">Copy</button></div>
-    </div>
-    <div class="step">
+      <p>Use these credentials to log in to AdsPower and then scan the QR for your 2FA:</p>
+      <div class="field">
+        <input type="text" id="email" readonly value="easytools22@outlook.com">
+        <button onclick="copyText('email')">Copy</button>
+      </div>
+      <div class="field">
+        <input type="text" id="password" readonly value="%1?QbzS1">
+        <button onclick="copyText('password')">Copy</button>
+      </div>
+    </section>
+    <section>
       <h2>Step 3:</h2>
       <p>Click below to reveal and scan your 2FA QR code:</p>
-      <div id="qr-container" class="qr-container"><button id="reveal-btn">Reveal QR Code</button></div>
-    </div>
-    <div class="step">
+      <button id="revealButton" onclick="revealQR()">Reveal QR Code</button>
+      <p class="note">Scan with Google Authenticator</p>
+      <img src="qr.png" id="qrImage" alt="QR Code" class="hidden">
+    </section>
+    <section>
       <h2>Step 4:</h2>
       <p>Click “Open” on the profile named Easy Tools.</p>
-    </div>
-  </div>
+    </section>
+  </main>
   <script src="script.js"></script>
 </body>
 </html>

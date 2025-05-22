@@ -1,7 +1,10 @@
 {
-  "name": "easytools-2fa-qr",
+  "name": "easytools-2fa-dashboard",
   "version": "1.0.0",
-  "type": "module",
+  "main": "index.html",
+  "scripts": {
+    "dev": "vercel dev"
+  },
   "dependencies": {
     "otplib": "^12.0.1"
   }
