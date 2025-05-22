@@ -2,43 +2,42 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>EasyTools 2FA Dashboard</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="site-header">
-    <img src="logo.png" alt="EasyTools Logo" class="site-logo">
+  <header>
+    <img src="logo.png" alt="EasyTools Logo" class="logo">
+    <h1>EasyTools 2FA Dashboard</h1>
   </header>
-  <main class="dashboard">
+  <main>
     <section class="step">
       <h2>Step 1:</h2>
-      <p>Download AdsPower Browser: <a href="https://adspower.com/download" target="_blank">adspower.com/download</a></p>
+      <p>Download AdsPower Browser from: <a href="https://adspower.com/download" target="_blank">adspower.com/download</a></p>
     </section>
     <section class="step">
       <h2>Step 2:</h2>
+      <p>Use these credentials to log in to AdsPower and then scan the QR for your 2FA:</p>
       <div class="credentials">
-        <input id="email" value="easytools22@outlook.com" readonly>
-        <button class="copy-btn" data-target="email">Copy</button>
-      </div>
-      <div class="credentials">
-        <input id="password" value="%1?QbzS1" readonly>
-        <button class="copy-btn" data-target="password">Copy</button>
+        <div class="field"><span>easytolls22@outlook.com</span><button class="copy-btn" data-copy="easytolls22@outlook.com">Copy</button></div>
+        <div class="field"><span>%1?QbzS1</span><button class="copy-btn" data-copy="%1?QbzS1">Copy</button></div>
       </div>
     </section>
     <section class="step">
       <h2>Step 3:</h2>
-      <p>Click below to reveal and scan your 2FA code:</p>
-      <div id="qr" class="qr-container"></div>
-      <button id="reveal-btn" class="action-btn">Reveal QR Code</button>
+      <p>Click below to reveal and scan your 2FA QR code:</p>
+      <div class="qr-container">
+        <img id="qr" src="qr-placeholder.png" alt="QR Code" hidden>
+        <button id="reveal-btn">Reveal QR Code</button>
+      </div>
+      <p>Scan with Google Authenticator</p>
     </section>
     <section class="step">
       <h2>Step 4:</h2>
-      <p>Click “Open” on the profile named <code>Easy Tools</code>.</p>
+      <p>Click “Open” on the profile named Easy Tools.</p>
     </section>
   </main>
-  <!-- QRCode.js library -->
-  <script src="https://cdn.jsdelivr.net/npm/qrcode@1.4.4/build/qrcode.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
