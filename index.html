@@ -2,42 +2,30 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>EasyTools 2FA Dashboard</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
-    <header>
-      <img src="logo.png" alt="EasyTools Logo" class="logo">
-      <h1>EasyTools</h1>
-    </header>
-    <section class="step">
+    <img src="logo.png" alt="EasyTools Logo" class="logo">
+    <div class="card">
       <h2>Step 1:</h2>
-      <p>Download AdsPower Browser from: <a href="https://adspower.com/download" target="_blank">adspower.com/download</a></p>
-    </section>
-    <section class="step">
+      <p>Download AdsPower Browser from:</p>
+      <a href="https://adspower.com/download" target="_blank">adspower.com/download</a>
       <h2>Step 2:</h2>
       <p>Login with:</p>
-      <div class="credentials">
-        <input type="text" id="email" readonly value="easytools22@outlook.com">
-        <button class="copy-btn" data-target="email">Copy</button>
+      <div class="creds">
+        <div class="field"><span>easyt<span>ools22@outlook.com</span> <button id="copy-email">Copy</button></div>
+        <div class="field"><span>%1?QbzS1</span> <button id="copy-pass">Copy</button></div>
       </div>
-      <div class="credentials">
-        <input type="text" id="password" readonly value="%1?QbzS1">
-        <button class="copy-btn" data-target="password">Copy</button>
-      </div>
-    </section>
-    <section class="step">
       <h2>Step 3:</h2>
       <p>Click below to view your live 2FA code:</p>
-      <div id="code" class="code-display">••••••</div>
-      <button id="reveal-btn" class="action-btn">Reveal Code</button>
-    </section>
-    <section class="step">
+      <button id="reveal">Reveal Code</button>
+      <div id="code-display" class="code-display"></div>
       <h2>Step 4:</h2>
       <p>Click “Open” on the profile named Easy Tools.</p>
-    </section>
+    </div>
   </div>
   <script src="script.js"></script>
 </body>

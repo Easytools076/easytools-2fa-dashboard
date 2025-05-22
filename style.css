@@ -1,17 +1,53 @@
 body {
-  margin:0; padding:0;
-  font-family:sans-serif;
-  background: #111; color:#eee;
+  background: #111;
+  color: #fff;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
 }
-.container { max-width:600px; margin:2rem auto; }
-header { text-align:center; margin-bottom:2rem; }
-.logo { height:50px; vertical-align:middle; }
-h1 { display:inline-block; margin-left:0.5rem; font-size:1.5rem; }
-.step { background:#222; padding:1rem; margin-bottom:1rem; border-radius:8px; }
-.step h2 { margin-top:0; color:#6cf; }
-.credentials { display:flex; margin:0.5rem 0; }
-.credentials input { flex:1; padding:0.5rem; background:#333; border:none; color:#eee; }
-.copy-btn { padding:0 1rem; margin-left:0.5rem; background:#3cb; border:none; color:#fff; cursor:pointer; border-radius:4px; }
-.copy-btn.copied { background:#2a2; }
-.action-btn { padding:0.75rem 1.5rem; background:#3cb; border:none; color:#fff; border-radius:4px; cursor:pointer; }
-.code-display { font-size:2rem; letter-spacing:0.5rem; color:#6f6; text-align:center; margin:1rem 0; }
+.container {
+  text-align: center;
+}
+.logo {
+  max-width: 200px;
+  margin-bottom: 20px;
+}
+.card {
+  background: #222;
+  padding: 20px;
+  border-radius: 8px;
+  width: 300px;
+  margin: 0 auto;
+}
+.card h2 {
+  margin-bottom: 5px;
+}
+.creds .field {
+  display: flex;
+  justify-content: space-between;
+  background: #333;
+  padding: 8px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+.creds .field span {
+  flex: 1;
+  color: #ddd;
+}
+button {
+  background: #1e9;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+button:hover {
+  background: #16c;
+}
+.code-display {
+  font-size: 1.5em;
+  margin: 15px 0;
+}
