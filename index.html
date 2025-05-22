@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EasyTools 2FA Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="logo"><img src="logo.png" alt="EasyTools Logo"></div>
+  <div class="container">
+    <div class="section">
+      <h3>Step 1:</h3>
+      <p>Download AdsPower Browser from:<br>
+      <a href="https://adspower.com/download" target="_blank">adspower.com/download</a></p>
+    </div>
+    <div class="section">
+      <h3>Step 2:</h3>
+      <p>Login using the following credentials:</p>
+      <div class="input-box">
+        <span id="email">easytools22@outlook.com</span>
+        <button class="btn-copy" onclick="copyText('email', this)">Copy</button>
+      </div>
+      <div class="input-box">
+        <span id="pw">%1?QbzS1</span>
+        <button class="btn-copy" onclick="copyText('pw', this)">Copy</button>
+      </div>
+    </div>
+    <div class="section">
+      <h3>Step 3:</h3>
+      <p>Click below to confirm and view your 2FA code.</p>
+      <button class="btn-action" onclick="openConfirmation()">Get 2FA Code</button>
+    </div>
+    <div class="section">
+      <h3>Step 4:</h3>
+      <p>Click “Open” on the profile named <code>Easy Tools</code>.</p>
+    </div>
+  </div>
+
+  <!-- Confirmation Modal -->
+  <div id="confirmationModal" class="modal">
+    <div class="modal-content">
+      <h2>⚠️ Confirmation</h2>
+      <p>If you are on this page, proceed to see the code.<br>Otherwise, please close.</p>
+      <ul>
+        <li>Select <strong>Authenticator</strong> in the AdsPower popup</li>
+        <li>Enter the code you will receive</li>
+        <li>Click <strong>OK</strong> to confirm</li>
+      </ul>
+      <div class="btn-group">
+        <button class="btn-action" onclick="closeConfirmation()">Cancel</button>
+        <button class="btn-action" onclick="showCode()">Reveal Code</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Code Modal -->
+  <div id="codeModal" class="modal">
+    <div class="modal-content">
+      <h2>2FA Verification Code</h2>
+      <div id="codeDisplay" class="code-display">000000</div>
+      <button class="btn-action" onclick="closeCode()">Close</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

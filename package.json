@@ -1,0 +1,8 @@
+{
+  "name": "easytools-2fa",
+  "version": "1.0.0",
+  "type": "module",
+  "dependencies": {
+    "otplib": "^12.0.1"
+  }
+}
